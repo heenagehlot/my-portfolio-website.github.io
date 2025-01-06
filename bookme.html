@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Me</title>
+    <link rel="stylesheet" href="bookme.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Book Me For Your Next Project</h1>
+        </nav>
+    </header>
+
+    <section class="book-me">
+        <p>If you're interested in working with me, please fill out the form below to get in touch. I'll get back to you as soon as possible!</p>
+        
+
+        <form action="submit-booking.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+
+            <label for="service">Select Service</label>
+            <select id="service" required onchange="handleOtherOption(this)">
+                <option value="" disabled selected>Select a service</option>
+                <option value="web-development">Web Development</option>
+                <option value="mobile-app-development">Mobile App Development</option>
+                <option value="data">Data Analysis</option>
+                <option value="consultation-services">Consultation Services</option>
+                <option value="chatbot-developer">Chatbot Developer</option>
+                <option value="game-design">Game Designing</option>
+                <option value="ui-ux-designer">UI/UX Designer</option>
+                <option value="software-development">Software Development</option>
+                <option value="seo-optimization">SEO Optimization</option>
+                <option value="other">Other</option>
+            </select>
+            <div id="otherServiceContainer" style="display: none; margin-top: 10px;">
+                <label for="other-service">Enter service</label>
+                <input type="text" id="other-service" name="other-service" placeholder="Enter your service">
+            </div>
+
+            <label for="project-details">Project Details</label>
+            <textarea id="project-details" name="project-details" rows="5" placeholder="Please describe your project requirements." required></textarea>
+
+            <label for="budget">Estimated Budget</label>
+            <input type="text" id="budget" name="budget" placeholder="Your Estimated Budget">
+
+            <label for="timeline">Preferred Timeline</label>
+            <input type="text" id="timeline" name="timeline" placeholder="e.g., 2 weeks, 1 month, etc." required>
+
+            <label for="preferred-date">Preferred Start Date</label>
+            <input type="date" id="preferred-date" name="preferred-date" required>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+
+        <h3>Why Choose Me?</h3>
+        <p>As a Computer Science student with a passion for learning and problem-solving, I bring fresh perspectives and enthusiasm to every project. Though I’m a fresher, I have hands-on experience with key concepts like programming, web development, and data analysis through academic projects and internships. My dedication to continuous growth ensures that I’m always eager to tackle challenges, adapt to new technologies, and deliver innovative solutions. Choosing me means working with someone who is committed, detail-oriented, and excited to contribute to your success.</p>
+
+        
+        <h4>Contact Information</h4>
+        <p>If you have any query, feel free to contact me at:</p>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:heenagehlot600@gmail.com">heenagehlot600@gmail.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Heena Gehlot. All rights reserved.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

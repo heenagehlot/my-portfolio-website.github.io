@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Contact Me</h1>
+        </nav>
+    </header>
+
+    <section id="contact-form-section">
+        <h2>Get in Touch</h2>
+        <p>Feel free to connect for any collaborations, opportunities, or inquiries. I look forward to engaging with you!</p>
+
+        <form action="submit-form.php" method="POST" class="contact-form">
+            <!-- Name Field -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <!-- Message Field -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            
+            <!-- Submit Button -->
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-details">
+            <h3>Or Reach Me At</h3>
+            <p><strong>Phone:</strong> <a href="tel:+918261075018">+91 8261075018</a></p>
+            <p><strong>Email:</strong> <a href="mailto:heenagehlot600@gmail.com">heenagehlot600@gmail.com</a></p>
+            <p><strong>Location:</strong> Pune, Maharashtra, India.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Heena Gehlot. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

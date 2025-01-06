@@ -1,0 +1,699 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: right;
+    animation: slideDown 1.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* Style the header itself */
+header {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    position: relative; /* Ensures the icon is positioned relative to the header */
+    text-align: right;
+    animation: slideDown 1.5s ease-in-out;
+    z-index: 10; /* Ensures the header is above other elements */
+}
+
+/* Style the icon inside the header */
+header .icon {
+    position: absolute; /* Allows precise positioning */
+    top: 50%; /* Vertically center the icon */
+    left: 20px; /* Add space from the left edge of the header */
+    transform: translateY(-50%); /* Ensures perfect vertical centering */
+    z-index: 11; /* Ensures the icon is visible above other elements */
+}
+
+/* Style the icon image */
+header .icon img {
+    width: 80px; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+    cursor: pointer; /* Change the cursor to a pointer */
+    border: none; /* Remove any border around the image */
+}
+
+header .icon {
+    outline: none; /* Remove the box outline when focused or hovered */
+    text-decoration: none; /* Ensure no underline appears */
+}
+
+
+
+
+
+
+nav {
+    display: flex;
+    justify-content: right;
+    background-color: #333;
+    animation: fadeIn 2s ease-in-out;
+    padding-right: 40px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('my photo.jpeg'); /* Replace with your image path */
+    background-size: contain; /* Decreases the size of the image while maintaining aspect ratio */
+    background-position: 100% center; /* Shifts the image slightly to the right */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    height: 100vh; /* Full screen height */
+    color: white; /* Adjust text color for visibility */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Aligns items to the left */
+    padding-left: 80px; /* Adds more space to shift text to the right */
+    text-align: left; /* Aligns text to the left */
+}
+
+.hero h1, .hero p {
+    margin: 0;
+}
+
+
+/* Hire Me Button */
+.hire-btn {
+    background-color: #424242; /* Blue background for button */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Add padding for a larger button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Increase font size */
+    cursor: pointer; /* Change cursor on hover */
+    margin-top: 20px; /* Add some space above the button */
+    transition: background-color 0.3s ease;
+}
+
+.hire-btn:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/******************************************************************************************************************************************** */
+
+/* Social Media Section */
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between the boxes */
+    padding: 20px;
+    background-color: black; /* Set the background color of the section to black */
+    text-align: center;
+}
+
+.social-box {
+    background-color: #333; /* Dark background for each box */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ccc; /* Light grey text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-box:hover {
+    transform: translateY(-5px); /* Hover effect - moves box up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/******************************************************************************************************************************************** */
+
+
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+
+/******************************************************************************************************************************************** */
+
+
+/* Section Styling */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Skills and Projects Layout */
+.skills, .projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+
+/******************************************************************************************************************************************** */
+
+
+
+/* Experience Section */
+#experience {
+    padding: 50px 20px;
+    background-color: #000000; /* Dark background color */
+    text-align: center;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.experience-item {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px; /* Restrict max width for large screens */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.experience-item:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.experience-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.experience-left,
+.experience-right {
+    flex: 1;
+    min-width: 45%;
+}
+
+.experience-left {
+    text-align: left;
+}
+
+.experience-left h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.experience-left .date {
+    font-size: 1.1rem;
+    color: #888;
+}
+
+.experience-right {
+    text-align: left;
+}
+
+.experience-right p {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.experience-right .role,
+.experience-right .topic {
+    font-weight: 600;
+}
+
+.experience-right .tools {
+    font-weight: 600;
+    color: #fff;
+}
+
+.experience-right .tools span {
+    color: #fff;
+}
+
+.experience-right .description {
+    font-size: 1rem;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+.experience-item .divider {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+/* Adding a small margin between experience items */
+.experience-container {
+    gap: 40px;
+}
+
+
+/******************************************************************************************************************************************** */
+/* Achievements Section */
+#achievements {
+    padding: 40px 20px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+#achievements h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Centered container for certificates */
+.achievements-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Single centered section for certificates */
+.achievements {
+    width: 70%; /* Adjust the width as needed */
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* List Style for Certificates */
+.certificate-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.certificate-list li {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.certificate-list li a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.certificate-list li a:hover {
+    text-decoration: underline;
+}
+
+.certificate-list li:hover {
+    background-color: #444;
+}
+
+/* Hover effect for the achievements section */
+.achievements:hover {
+    transform: translateY(-5px);
+}
+
+/* Link for viewing all certifications */
+.certification-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.certification-link:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/******************************************************************************************************************************************** */
+
+
+/* Adjust logo size to fit inside each skill box */
+.skill-logo {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px;
+    object-fit: contain; /* Ensures the logo maintains its aspect ratio */
+    margin-bottom: 20px;
+}
+
+
+/********************************************************************************************************************************************
+
+
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Container for all services */
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Service */
+.service {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 22%; /* Adjust based on the number of services you want to show per row */
+    padding: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.service-list li {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.service-list li::before {
+    content: "✓";
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+/* Book Now Button */
+.book-btn {
+    background-color: #393939;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: center;
+}
+
+.book-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 1024px) {
+    .service {
+        width: 45%; /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .service {
+        width: 100%; /* Adjust for small screens */
+    }
+}
+
+
+/******************************************************************************************************************************************** */
+
+
+/* Centralize the Section */
+#client-reviews {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.review-form {
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.star.selected {
+    color: #f39c12;
+}
+
+textarea {
+    width: 80%;
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/******************************************************************************************************************************************** */
+
+/* Footer Styling */
+#site-footer {
+    background-color: #222222;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Contact Me Button */
+.contact-button button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-button button:hover {
+    background-color: #555;
+}
+
+/* Contact Details */
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item .icon {
+    font-size: 20px;
+}
+
+/* Copyright Panel */
+.footer-copyright {
+    font-size: 14px;
+    color: #888;
+}
+
+
+/******************************************************************************************************************************************** */
+.footer-contact a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/******************************************************************************************************************************************** */
+
+
+
+
+
+
+/******************************************************************************************************************************************** */
+
+
+
+
+
+/* Card Styles */
+.card {
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    background-color: #1e1e1e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Bounce In Animation */
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
